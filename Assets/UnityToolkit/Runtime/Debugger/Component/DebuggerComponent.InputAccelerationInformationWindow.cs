@@ -1,0 +1,42 @@
+// Copyright (c) 2023 NicoIer and Contributors.
+// Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
+﻿#if UNITY_5_6_OR_NEWER
+using UnityEngine;
+
+namespace UnityToolkit.Debugger
+{
+    public sealed partial class DebuggerComponent
+    {
+        private sealed class InputAccelerationInformationWindow : ScrollableDebuggerWindowBase
+        {
+            protected override void OnDrawScrollableWindow()
+            {
+                GUILayout.Label("<b>Input Acceleration Information</b>");
+                GUILayout.BeginVertical("box");
+                {
+                    DrawItem("Acceleration", Input.acceleration.ToString());
+                    DrawItem("Acceleration Event Count", Input.accelerationEventCount.ToString());
+                    DrawItem("Acceleration Events", GetAccelerationEventsString(Input.accelerationEvents));
+                }
+                GUILayout.EndVertical();
+            }
+
+            private string GetAccelerationEventString(AccelerationEvent accelerationEvent)
+            {
+                return Utility.Text.Format("{0}, {1}", accelerationEvent.acceleration, accelerationEvent.deltaTime);
+            }
+
+            private string GetAccelerationEventsString(AccelerationEvent[] accelerationEvents)
+            {
+                string[] accelerationEventStrings = new string[accelerationEvents.Length];
+                for (int i = 0; i < accelerationEvents.Length; i++)
+                {
+                    accelerationEventStrings[i] = GetAccelerationEventString(accelerationEvents[i]);
+                }
+
+                return string.Join("; ", accelerationEventStrings);
+            }
+        }
+    }
+}
+#endif

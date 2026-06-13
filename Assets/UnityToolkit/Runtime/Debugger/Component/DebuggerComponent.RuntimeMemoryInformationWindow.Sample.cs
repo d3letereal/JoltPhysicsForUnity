@@ -1,0 +1,64 @@
+// Copyright (c) 2023 NicoIer and Contributors.
+// Licensed under the MIT License (MIT). See LICENSE in the repository root for more information.
+﻿#if UNITY_5_6_OR_NEWER
+namespace UnityToolkit.Debugger
+{
+    public sealed partial class DebuggerComponent
+    {
+        private sealed partial class RuntimeMemoryInformationWindow<T> : ScrollableDebuggerWindowBase where T : UnityEngine.Object
+        {
+            private sealed class Sample
+            {
+                private readonly string m_Name;
+                private readonly string m_Type;
+                private readonly long m_Size;
+                private bool m_Highlight;
+
+                public Sample(string name, string type, long size)
+                {
+                    m_Name = name;
+                    m_Type = type;
+                    m_Size = size;
+                    m_Highlight = false;
+                }
+
+                public string Name
+                {
+                    get
+                    {
+                        return m_Name;
+                    }
+                }
+
+                public string Type
+                {
+                    get
+                    {
+                        return m_Type;
+                    }
+                }
+
+                public long Size
+                {
+                    get
+                    {
+                        return m_Size;
+                    }
+                }
+
+                public bool Highlight
+                {
+                    get
+                    {
+                        return m_Highlight;
+                    }
+                    set
+                    {
+                        m_Highlight = value;
+                    }
+                }
+            }
+        }
+    }
+}
+#endif

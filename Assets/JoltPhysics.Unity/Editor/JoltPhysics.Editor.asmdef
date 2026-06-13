@@ -1,0 +1,19 @@
+{
+    "name": "JoltPhysics.Editor",
+    "rootNamespace": "JoltPhysics.Unity.Editor",
+    "references": [
+        "GUID:eacbdf95c47b447ba819a92652abce2b",
+        "GUID:bfa8e015725b4bf5b6898735014bd119"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

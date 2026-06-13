@@ -1,0 +1,16 @@
+#*.meta
+.DS_Store
+
+.idea/
+
+# 忽略Network下所有的.meta文件
+
+obj/
+bin/
+
+# README相关也不需要.meta
+README.md.meta
+README-En.md.meta
+
+# LICENSE相关也不需要.meta
+LICENSE.meta
