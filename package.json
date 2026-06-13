@@ -1,0 +1,7 @@
+{
+  "name": "com.d3letereal.joltphysicsforunity",
+  "version": "1.0.0",
+  "displayName": "Jolt Physics For Unity",
+  "description": "Unity integration for Jolt Physics",
+  "unity": "2021.3"
+}
