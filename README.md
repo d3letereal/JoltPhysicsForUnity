@@ -1,2 +1,3 @@
 # JoltPhysicsForUnity
-Joltphysics port for unity
+
+This was orginaly made by  [NicoIer/joltphysics_unity](https://github.com/NicoIer/joltphysics_unity)
